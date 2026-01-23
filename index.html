@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TENNIS EXPERT™ | Official</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -14,209 +14,129 @@
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
 }
-a{ text-decoration:none; color:inherit }
 
 body{
-  background:black;
-  color:white;
+  background:#ffffff;
+  color:#111;
   text-align:center;
-  height:100vh;
-  overflow:hidden;
 }
 
-/* BACKGROUND */
-.background{
-  position:fixed;
-  inset:0;
-  background:url('/image/Фон города для Фотошопа - скачать фото бесплатно.jpeg') center/cover no-repeat;
-  filter:blur(1px);
-  z-index:-2;
-}
-.overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.65);
-  z-index:-1;
-}
-
-/* BUBBLES */
-.bubbles span{
-  position:absolute;
-  bottom:-50px;
-  width:20px;height:20px;
-  background:rgba(255,255,255,.2);
-  border-radius:50%;
-  animation:rise 10s linear infinite;
-}
-.bubbles span:nth-child(2){width:30px;height:30px;left:20%;animation-duration:7s}
-.bubbles span:nth-child(3){width:40px;height:40px;left:40%;animation-duration:9s}
-.bubbles span:nth-child(4){width:50px;height:50px;left:60%;animation-duration:6s}
-.bubbles span:nth-child(5){width:60px;height:60px;left:80%;animation-duration:8s}
-
-@keyframes rise{
-  0%{bottom:-50px;opacity:0}
-  50%{opacity:1}
-  100%{bottom:100%;opacity:0}
-}
-
-/* CONTENT */
+/* MAIN BOX */
 .container{
+  min-height:100vh;
   display:flex;
-  justify-content:center;
   align-items:center;
-  height:100vh;
+  justify-content:center;
   padding:15px;
 }
-.blur-box{
-  background:rgba(255,255,255,.15);
-  backdrop-filter:blur(12px);
-  border-radius:16px;
-  padding:25px 18px;
+
+.box{
   width:100%;
-  max-width:400px;
-  box-shadow:0 0 25px rgba(0,230,255,.6);
+  max-width:420px;
+  border:1px solid #e5e5e5;
+  border-radius:12px;
+  padding:25px 20px;
 }
 
+/* TEXT */
 h1{
-  color:#00e6ff;
+  color:#0066ff;
   font-size:24px;
   font-weight:700;
-  margin-bottom:6px;
-  text-transform:uppercase;
-}
-.tagline{
-  font-size:14px;
-  opacity:.9;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
-.timer{
-  font-size:20px;
-  font-weight:700;
-  margin:8px 0;
+.tagline{
+  font-size:14px;
+  color:#555;
+  margin-bottom:15px;
 }
 
 /* PROFILE */
 .profile img{
-  width:140px;
-  height:140px;
+  width:130px;
+  height:130px;
   border-radius:50%;
-  border:3px solid #00e6ff;
-  box-shadow:0 0 15px #00e6ff;
-  margin:12px 0;
+  border:2px solid #0066ff;
   object-fit:cover;
+  margin-bottom:12px;
 }
 
 /* BUTTON */
-@keyframes shine{
-  from{background-position:-200%}
-  to{background-position:200%}
-}
-@keyframes zoom{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.12)}
-  100%{transform:scale(1)}
-}
-
-.view-btn{
+.join-btn{
   display:inline-block;
-  height:46px;
-  line-height:46px;
-  padding:0 28px;
-  border-radius:40px;
+  margin-top:15px;
+  padding:12px 30px;
+  background:#0066ff;
+  color:#fff;
   font-size:16px;
   font-weight:600;
-  background:linear-gradient(45deg,#00e6ff,#3a7bd5);
-  background-size:400% 400%;
-  animation:shine 8s linear infinite,zoom 3s ease-in-out infinite;
-  color:#fff;
-  margin-top:12px;
+  border-radius:30px;
+  text-decoration:none;
 }
 
+/* FOOTER */
 .footer-text{
   font-size:13px;
-  margin-top:14px;
-  opacity:.85;
+  color:#666;
+  margin-top:15px;
 }
 
-/* CREDIT */
 .credit{
-  position:absolute;
-  bottom:10px;
-  width:100%;
-  text-align:center;
+  margin-top:25px;
   font-size:12px;
-  color:#00e6ff;
-}
-.credit a{
-  color:#00ffcc;
-  font-weight:600;
+  color:#888;
 }
 
-/* MOBILE TUNING */
+.credit a{
+  color:#0066ff;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* MOBILE */
 @media(max-width:480px){
   h1{font-size:22px}
-  .profile img{width:125px;height:125px}
-  .view-btn{font-size:15px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="background"></div>
-<div class="overlay"></div>
-
-<div class="bubbles">
-  <span></span><span></span><span></span><span></span><span></span>
-</div>
-
 <div class="container">
-  <div class="blur-box">
+  <div class="box">
 
     <h1>TENNIS EXPERT™</h1>
     <p class="tagline">🎾 100% Free Tennis Tips & Match Predictions</p>
-
-    <div class="timer">
-      <span id="countdown">3</span> SECONDS
-    </div>
 
     <div class="profile">
       <img src="https://thinkbigx.sbs/wp-content/uploads/2026/01/teenisss.jpg" alt="Tennis Expert">
     </div>
 
-    <h2 style="font-size:18px;margin-top:6px;">35,000+ Members</h2>
-    <p>✅ Live Match Tips • Grand Slams • ATP • WTA</p>
+    <h2 style="font-size:18px;">35,000+ Members</h2>
+    <p style="font-size:14px;color:#555;">
+      ✅ Live Match Tips • ATP • WTA • Grand Slams
+    </p>
 
-    <a href="https://t.me/+5a6vi35ngDg1MTc9" class="view-btn">
+    <a href="https://t.me/+5a6vi35ngDg1MTc9" class="join-btn">
       JOIN TENNIS EXPERT™ FREE
     </a>
 
     <p class="footer-text">
-      🌍 Trusted Tennis Analysts | Daily Winning Insights
+      Trusted Tennis Analysts | Daily Insights
     </p>
+
+    <div class="credit">
+      Ads managed by
+      <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank">
+        @Nexgroww_agency
+      </a>
+    </div>
 
   </div>
 </div>
 
-<div class="credit">
-  Ads managed by 
-  <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank">
-    @Nexgroww_agency
-  </a>
-</div>
-
-<script>
-//let countdown = 3;
-setInterval(()=>{
-  document.getElementById("countdown").innerText = countdown;
-  //if(countdown === 0){
-  //  window.location.href="https://t.me/+5a6vi35ngDg1MTc9";
-  }
-  countdown--;
-},1000);
-</script>
-<!-- Meta Pixel Code -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -229,11 +149,11 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1872946770005557');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1872946770005557&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
-  
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1872946770005557&ev=PageView&noscript=1"/>
+</noscript>
+
 </body>
 </html>
